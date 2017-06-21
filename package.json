@@ -2,7 +2,7 @@
   "name": "unicode-confusables-data",
   "version": "10.0.0-20170721",
   "description": "Unicode's confusables.txt document in a programmatically consumable format",
-  "files": "confusables.json",
+  "files": ["confusables.json"],
   "main": "confusables.json",
   "scripts": {
     "download": "curl --compressed -C - -O ftp://ftp.unicode.org/Public/security/10.0.0/confusables.txt",
