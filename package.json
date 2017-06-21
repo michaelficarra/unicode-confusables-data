@@ -1,0 +1,32 @@
+{
+  "name": "unicode-confusables-data",
+  "version": "10.0.0-20170721",
+  "description": "Unicode's confusables.txt document in a programmatically consumable format",
+  "files": "confusables.json",
+  "main": "confusables.json",
+  "scripts": {
+    "download": "curl --compressed -C - -O ftp://ftp.unicode.org/Public/security/10.0.0/confusables.txt",
+    "build": "npm run download && node process-confusables.js",
+    "test": "node -e 'require(\"./\")'",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/michaelficarra/unicode-confusables-data.git"
+  },
+  "keywords": [
+    "Unicode",
+    "confusables",
+    "UTS",
+    "UTS39",
+    "JSON",
+    "homoglyphs",
+    "data"
+  ],
+  "author": "Michael Ficarra",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/michaelficarra/unicode-confusables-data/issues"
+  },
+  "homepage": "https://github.com/michaelficarra/unicode-confusables-data#readme"
+}
