@@ -1,7 +1,10 @@
+'use strict';
+
 let fs = require('fs');
 let raw = fs.readFileSync('./confusables.txt').toString();
 let lines = raw.split(/[\r\n]+/g);
 let map = {};
+
 for (let line of lines) {
   line = line.trim();
   if (line === '' || line[0] === '#') continue;
